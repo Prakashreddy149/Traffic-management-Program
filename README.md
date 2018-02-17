@@ -14,13 +14,10 @@ The components required are given below
 •	BUZZER
 •	MOTHER BOARD
 •	CONNECTING WIRES
-
-
-       SOFTWARE :
+      SOFTWARE :
 •	AVR  STUDIO PROGRAMMER
-•	AVROSPLL ATMEGA 16 CONTROLLER DEBUGGER
+•	AVROSPLL ATMEGA 16 CONTROLLER DEBUGGER                
 working :->
-
 - This project is to implement rules while traffic.
 - It has a sensor which is used to detect the vehicles which are standing on or after zebra crossing.
 - If there is any vehicle the sensor will gives the signal to microcontroller.
