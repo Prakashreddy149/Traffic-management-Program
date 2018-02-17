@@ -22,7 +22,8 @@ The components required are given below
 working :->
 
 - This project is to implement rules while traffic.
-- It has a sensor which is used to detect the vehicles which are standing on or             after zebra crossing.
+- It has a sensor which is used to detect the vehicles which are standing on or after zebra crossing.
 - If there is any vehicle the sensor will gives the signal to microcontroller.
 - Then the microcontroller gives the signal to the buzzer. Then buzzer gives beep signal as an alert signal.
 -the above conditions are done when the Red light is in on state but not in any other conditions.
+copy the code from the html document and compile it in "AVR  STUDIO PROGRAMMER,AVROSPLL ATMEGA 16 CONTROLLER DEBUGGER"
