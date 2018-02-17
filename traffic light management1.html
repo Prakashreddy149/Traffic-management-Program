@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0086)http://dw.convertfiles.com/files/0720756001518871791/traffic%20light%20management.html -->
+<html class="gr__dw_convertfiles_com"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title></title>
+<meta name="GENERATOR" content="OpenOffice 4.1.1  (FreeBSD/amd64)">
+<meta name="CREATED" content="20180217;4500900">
+<meta name="CHANGED" content="0;0">
+<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.08in }
+		PRE.cjk { font-family: "Courier", monospace }
+	-->
+	</style>
+</head>
+<body lang="en-US" dir="LTR" data-gr-c-s-loaded="true">
+<pre class="western">#include&lt;avr/io.h&gt;
+#define F_CPU 8000000UL
+#include&lt;util/delay.h&gt;
+unsigned char a[]={0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90};
+int i;	
+
+int main()
+{
+	DDRD&amp;=!(1&lt;&lt;PD6);
+	DDRD|=(1&lt;&lt;PD0);
+    DDRB=0xff;
+	DDRA=0xff;
+	int i;
+	while(1)
+	{
+		PORTB=0xfe;
+		{
+		for(i=0;i&lt;10;i++)
+		{
+		PORTA=a[i];
+		if(!(PIND&amp;(1&lt;&lt;PD6)))
+		{
+		PORTD&amp;=!(1&lt;&lt;PD0);
+		}
+		else
+		{
+		PORTD=(1&lt;&lt;PD0); 
+		}
+		_delay_ms(1000);
+		}
+		}
+		PORTD|=(1&lt;&lt;PD0);
+		
+		PORTB=0xfd;
+		for(i=0;i&lt;2;i++)
+		_delay_ms(1000);
+		PORTB=0xfb;
+		{
+		for(i=0;i&lt;10;i++)
+		{
+			PORTA=a[i];
+			_delay_ms(1000);
+		}
+		}
+	}
+return 0;
+}</pre>
+
+<div id="dz-frame" style="display:none">  <div class="indshp-products_list-main" style="right:-280px;">
+    <div id="indshp-cl-button">
+      <img class="hcl-b-front" src="http://dw.convertfiles.com/files/0720756001518871791/traffic%20light%20management.html">
+    </div>
+    <div class="ind-sidebar">
+     <!-- <div class="ind-sidebar-wrap">
+        <a href="#" class="hc-close">x</a>-->
+        <div id="hc-header">
+          
+			
+				<!--<img src="http://www.indiashopps.com/kiran/indiashopps_logo-final.png" width="180px">-->
+			
+            <div class="ind-toggler" id="side-toggle"><img id="sideimg" src="chrome-extension://amanlcdnojadchadmedfkljbkffioapi/sidebar-exclusive.png" width="27px"></div>
+                
+        </div>
+        <div class="hc-sb-content">		
+          <div id="dz-products" class="hc-sb-c-wrapp">
+			          
+          </div>		  
+        </div>     
+     <!-- </div>-->
+    </div>
+  </div>
+</div></body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
